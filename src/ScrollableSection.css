@@ -1,0 +1,18 @@
+/* Scrollable Section */
+.scrollable-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scrollable-container {
+    display: flex;
+    transition: transform 1s linear;
+  }
+  
+  .scrollable-container img {
+    width: 250px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust spacing between images */
+  }
+  

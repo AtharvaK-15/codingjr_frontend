@@ -1,0 +1,106 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative; /* Ensure relative positioning for z-index purposes */
+}
+
+.navbar__logo img {
+    width: 150px;
+    height: auto;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar__links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.navbar__links a:hover {
+    text-decoration: underline;
+}
+
+.navbar__buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar__button {
+    padding: 0.5rem 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.navbar__button--login {
+    background-color: #007bff;
+}
+
+.navbar__button--signup {
+    background-color: #007bff;
+}
+
+.navbar__button:hover {
+    background-color: #0056b3;
+}
+
+.navbar__toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    z-index: 1000; /* Ensure the toggle button is above other elements */
+}
+
+.navbar__toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar__links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #fff;
+        padding: 1rem 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        z-index: 999; /* Ensure the links are below the toggle button */
+    }
+
+    .navbar__links.open {
+        display: flex;
+    }
+
+    .navbar__links a {
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__buttons {
+        flex-direction: column;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+}

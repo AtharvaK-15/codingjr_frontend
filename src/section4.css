@@ -1,0 +1,31 @@
+/* General styling */
+.section4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.section4 img {
+    width: 10%;
+    margin: 0 1rem;
+}
+
+.section4 h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.section4 .highlight {
+    color: #007bff; /* Highlight color */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .section4 img {
+        display: none;
+    }
+}
